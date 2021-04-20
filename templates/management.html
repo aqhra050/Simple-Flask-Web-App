@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<div class="twoContentEvenSplit">
+    <div class="col_two_flush center actionButton managementOption">
+        <a href="{{url_for('newListing')}}">Add New Bull Listing</a>
+    </div>
+    <div class="col_two_flush center actionButton managementOption">
+        <a href="{{url_for('listingsModify')}}">Manage Existing Listings</a>
+    </div>
+</div>  
+
+{% endblock %}

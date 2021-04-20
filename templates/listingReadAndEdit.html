@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<div class="gallery center">
+    {% for doc in docs %}
+    <div class="galleryItemContainer">
+        <div class="inquiry">
+            <h3 class="center">Bull ID: {{doc._id}}</h3>
+            <h3 class="center">Entered at {{doc.created_at}}</h3>
+        </div>
+        <div class="tenthPerc twoContentEvenSplit">
+            <div class="col_two_slim">
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Image URL</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center minimize">
+                        <p>{{doc.imageURL}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Breed</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.breed}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Age (Years)</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.age}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Weight (Kg)</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.weight}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Price (Rs)</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.price}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col_two_slim">
+                <div class="shorten">
+                    <img class="center productImage" src={{doc.imageURL}}>
+                </div>
+            </div>
+        </div>
+        <div class="twoContentEvenSplit">
+            <div class="col_two_flush actionButton">
+                <a class="center" href="{{ url_for('listingEdit' , listingMongoID=doc._id )}}">EDIT</a>
+            </div>
+            <div class="col_two_flush actionButton">
+                <a class="center" href="{{ url_for('listingDelete' , listingMongoID=doc._id )}}">DELETE</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

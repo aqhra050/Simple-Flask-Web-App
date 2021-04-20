@@ -1,0 +1,18 @@
+{
+    "_id": 0,
+    "imageURL": "http://1.bp.blogspot.com/-2Ddo0uc_ZD0/UaG6lSqkLJI/AAAAAAAABSE/RQ-XCbtTZsc/s1600/Bakra%2BEid%2BCow%2BQurbani%2B2013%2B%25285%2529-757381.jpg",
+    "breed": "Desi",
+    "age": 2.5,
+    "weight": 450,
+    "price": 100000,
+    "created_at": "2021-04-16 10:55:51.127832"
+}
+{
+    "_id": 1,
+    "imageURL": "http://1.bp.blogspot.com/-2Ddo0uc_ZD0/UaG6lSqkLJI/AAAAAAAABSE/RQ-XCbtTZsc/s1600/Bakra%2BEid%2BCow%2BQurbani%2B2013%2B%25285%2529-757381.jpg",
+    "breed": "Desi",
+    "age": 3,
+    "weight": 400,
+    "price": 80000,
+    "created_at": "2021-04-16 10:57:56.021153"
+}

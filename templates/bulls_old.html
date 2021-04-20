@@ -1,0 +1,53 @@
+{% if loop.index is divisibleby 2 %}
+<div class="col_two">
+    <img class="productImage" src={{doc.imageURL}}>
+</div>
+<div class="col_two">
+    <div class="productDescription">
+        <div class="col_two productFieldHeadings">
+            <p>Bull</p>
+            <p>Breed</p>
+            <p>Age</p>
+            <p>Weight</p>
+            <p>Price</p>
+        </div>
+        <div class="col_two">
+            <p>{{doc._id}}</p>
+            <p>{{doc.breed}}</p>
+            <p>{{doc.age}} Years</p>
+            <p>{{doc.weight}} Kg</p>
+            <p>Rs. {{doc.price}}</p>
+        </div>
+    </div>
+    <div class="actionButton">
+        <a class="productOrder" href="{{ url_for('inquiryCollect' , bullID=doc._id)}}"><p>Place an Inquiry now.</p></a>
+    </div>
+</div>
+{% else %}
+<div class="col_two">
+    <div class="productDescription">
+        <div class="col_two productFieldHeadings">
+            <p>Bull</p>
+            <p>Breed</p>
+            <p>Age</p>
+            <p>Weight</p>
+            <p>Price</p>
+        </div>
+        <div class="col_two">
+            <p>{{doc._id}}</p>
+            <p>{{doc.breed}}</p>
+            <p>{{doc.age}} Years</p>
+            <p>{{doc.weight}} Kg</p>
+            <p>Rs. {{doc.price}}</p>
+        </div>
+    </div>
+    <div class="actionButton">
+        <a class="productOrder" href="{{ url_for('inquiryCollect' , bullID=doc._id)}}"><p>Place an Inquiry now.</p></a>
+    </div>
+</div>
+<div class="col_two">
+    <img class="productImage" src={{doc.imageURL}}>
+</div>
+{% endif %}
+
+</div> -->

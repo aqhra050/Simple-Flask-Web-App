@@ -1,31 +1,47 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Flask-MongoDB Example App</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Flask-MongoDB Example App</h1>
-        <p>
-          <a href="{{ url_for('home')}}">Home</a> |
-          <a href="{{ url_for('read')}}">All posts</a> |
-          <a href="{{ url_for('create')}}">Create a post</a>
-        </p>
-      </header>
-      <main>{% block container %} {% endblock %}</main>
-      <footer>
-        <p>
-          The source code for this example app is
-          <a href="https://github.com/nyu-database-design/flask-mongodb-example"
-            >available on Github</a
-          >.
-        </p>
-      </footer>
-    </div>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>EidCattle | Qurbani Bulls Purchase</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="navBar">
+                    <div class="navLogoCtnr">
+                        <img class="navLogoImg" src="{{ url_for('static', filename='images/logo/DangerPoor-310.png') }}" alt="Logo for EidCattle.">
+                        <h1 class="navLogoTxt">EidCattle</h1>
+                    </div>
+                    <nav class="navButtonCtnr">
+                        <ul class="navButtons">
+                            <li class="navButton">
+                                <a href="{{ url_for('home') }}">Home</a>
+                            </li>
+                            <li class="navButton">
+                                <a href="{{ url_for('readBulls') }}">Bulls</a>
+                            </li>
+                            <li class="navButton">
+                                <a href="{{ url_for('inquiryRead') }}">Inquiries</a>
+                            </li>
+                            <li class="navButton">
+                                <a href="{{ url_for('managementPrompt') }}">Management</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                {% block container %} {% endblock %}
+            </main>
+            <footer>
+                <div class="footerCtnr">
+                    <p>The content and functionality herein is only for the purposes of an assignment, hence the unverified access to the "Inquiries" and "Management" Page.</p>
+                </div>
+            </footer>
+        </div>
+    </body>
 </html>

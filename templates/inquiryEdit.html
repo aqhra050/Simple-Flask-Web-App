@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<div class="inquiryFormContainer">
+    <form action="{{url_for('inquiryEditPost', inquiryMongoID=inquiryMongoID)}}" class="entryForms" method="post">
+        <ul>
+            <div class="entriesOuterContainer">
+                <div class="col_two">
+                    <li>
+                        <label for="bullID">Selected Bull</label>
+                        <input type="text" id="bullID" name="userBullID" value="{{doc.selectedBull}}">
+                    </li>
+                    <li>
+                        <label for="bullPrice">Price</label>
+                        <input type="text" id="bullPrice" name="userBullPrice" value="{{doc.bullPrice}}">
+                    </li>
+                    <li>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="userName" value="{{doc.name}}">
+                    </li>
+                    <li>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="userEmail" value="{{doc.email}}">
+                    </li>
+                    <li>
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" name="userPhoneNumber" value="{{doc.phoneNumber}}" >
+                    </li>
+                </div>
+                <div class="col_two">
+                    <li>
+                        <label for="addressL1">Address Line 1</label>
+                        <input type="text" id="addressL1" name="userAddressL1" value="{{doc.addressL1}}">
+                    </li>
+                    <li>
+                        <label for="addressL2">Address Line 2</label>
+                        <input type="text" id="addressL2" name="userAddressL2" value="{{doc.addressL2}}">
+                    </li>
+                    <li>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="userCity" value="{{doc.city}}">
+                    </li>
+                    <li>
+                        <label for="province">Province</label>
+                        <input type="text" id="country" name="userProvince" value="Punjab" value="{{doc.province}}">
+                    </li>
+                    <li>
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="userCountry" value="Pakistan" value="{{doc.country}}">
+                    </li>
+                </div>
+            </div>
+            <div class="actionButton">
+                <li>
+                    <button class="button" type="submit">Update Order</button>
+                </li>
+            </div>
+        </ul>
+    </form>
+</div>
+  
+  
+{% endblock %}

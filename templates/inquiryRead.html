@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<div class="gallery center">
+    {% for doc in docs%}
+    <div class="galleryItemContainer">
+        <div class="inquiry">
+            <h3 class="center">Order ID: {{doc._id}}</h3>
+            <h3 class="center">Placed at {{doc.created_at}}</h3>
+        </div>
+        <div class="tenthPerc twoContentEvenSplit">
+            <div class="col_two_slim">
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Selected Bull_ID</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.selectedBull}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Bull Price (Rs.)</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.bullPrice}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Name</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.name}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Email</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.email}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Phone Number</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.phoneNumber}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col_two_slim">
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Address Line One</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.addressL1}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Address Line Two</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.addressL2}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>City</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.city}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Province</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.province}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Country</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.country}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col_two_slim twoContentEvenSplit">
+                <div class="fieldHeadings col_two_slim center">
+                    <p>Address Line One</p>
+                    <p>Address Line Two</p>
+                    <p>City</p>
+                    <p>Province</p>
+                    <p>Country</p>
+                </div>
+                <div class="fieldContents col_two_slim center">
+                    <p>{{doc.addressL1}}</p>
+                    <p>{{doc.addressL2}}</p>
+                    <p>{{doc.city}}</p>
+                    <p>{{doc.province}}</p>
+                    <p>{{doc.country}}</p>
+                </div>
+            </div> -->
+        </div>
+        <div class="twoContentEvenSplit">
+            <div class="col_two_flush actionButton">
+                <a class="center" href="{{ url_for('inquiryEdit' , inquiryMongoID=doc._id )}}">EDIT</a>
+            </div>
+            <div class="col_two_flush actionButton">
+                <a class="center" href="{{ url_for('inquiryDelete' , inquiryMongoID=doc._id )}}">DELETE</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

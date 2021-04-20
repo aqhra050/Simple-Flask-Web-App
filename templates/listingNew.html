@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<div class="formContainer">
+    <form action="{{url_for('newListingPost')}}" class="entryForms" method="post">
+        <ul>
+            <div class="entriesOuterContainer">
+                <div class="col_two">
+                    <li>
+                        <label for="bullID">ID</label>
+                        <input type="text" id="bullID" name="newBullID">
+                    </li>
+                    <li>
+                        <label for="bullImageURL">Image URL</label>
+                        <input type="text" id="bullImageURL" name="newBullImageURL">
+                    </li>
+                    <li>
+                        <label for="bullBreed">Breed</label>
+                        <input type="text" id="bullBreed" name="newBullBreed">
+                    </li>
+                </div>
+                <div class="col_two">
+                    <li>
+                        <label for="bullAge">Age (Years)</label>
+                        <input type="text" id="bullAge" name="newBullAge">
+                    </li>
+                    <li>
+                        <label for="bullWeight">Weight (Kg.)</label>
+                        <input type="text" id="bullWeight" name="newBullWeight">
+                    </li>
+                    <li>
+                        <label for="bullPrice">Price</label>
+                        <input type="text" id="bullPrice" name="newBullPrice">
+                    </li>
+                </div>
+            </div>
+            <div class="actionButton">
+                <li>
+                    <button class="button" type="submit">Add Listing</button>
+                </li>
+            </div>
+        </ul>
+    </form>
+</div>
+{% endblock %}

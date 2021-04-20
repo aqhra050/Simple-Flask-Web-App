@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<div class="formContainer">
+    <form action="{{ url_for('listingEditPost', listingMongoID=0) }}" class="entryForms" method="post">
+        <ul>
+            <div class="entriesOuterContainer">
+                <div class="col_two">
+                    <li>
+                        <label for="bullID">ID</label>
+                        <input type="text" id="bullID" name="newBullID" value="{{doc._id}}" disabled="disabled">
+                        <input type="text" id="bullID" name="newBullID" value="{{doc._id}}" hidden=true>
+                    </li>
+                    <li>
+                        <label for="bullImageURL">Image URL</label>
+                        <input type="text" id="bullImageURL" name="newBullImageURL" value="{{doc.imageURL}}">
+                    </li>
+                    <li>
+                        <label for="bullBreed">Breed</label>
+                        <input type="text" id="bullBreed" name="newBullBreed" value="{{doc.breed}}">
+                    </li>
+                </div>
+                <div class="col_two">
+                    <li>
+                        <label for="bullAge">Age (Years)</label>
+                        <input type="text" id="bullAge" name="newBullAge" value="{{doc.age}}">
+                    </li>
+                    <li>
+                        <label for="bullWeight">Weight (Kg.)</label>
+                        <input type="text" id="bullWeight" name="newBullWeight" value="{{doc.weight}}">
+                    </li>
+                    <li>
+                        <label for="bullPrice">Price (Rs.) </label>
+                        <input type="text" id="bullPrice" name="newBullPrice" value="{{doc.price}}">
+                    </li>
+                </div>
+            </div>
+            <div class="actionButton">
+                <li>
+                    <button class="button" type="submit">Edit Listing</button>
+                </li>
+            </div>
+        </ul>
+    </form>
+</div>
+{% endblock %}

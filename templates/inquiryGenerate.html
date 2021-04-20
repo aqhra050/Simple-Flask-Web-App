@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<div class="formContainer">
+    <form action="/inquiryGenerate" class="entryForms" method="post">
+        <ul>
+            <div class="entriesOuterContainer">
+                <div class="col_two">
+                    <li>
+                        <label for="bullID">Selected Bull</label>
+                        <input type="text" id="bullID" name="userBullID" value="{{doc._id}}" disabled="disabled">
+                        <input type="text" id="bullID" name="userBullID" value="{{doc._id}}" hidden="true">
+                    </li>
+                    <li>
+                        <label for="bullPrice">Price</label>
+                        <input type="text" id="bullPrice" name="userBullPrice" value="{{doc.price}}" disabled="disabled">
+                        <input type="text" id="bullPrice" name="userBullPrice" value="{{doc.price}}" hidden="true">
+                    </li>
+                    <li>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="userName">
+                    </li>
+                    <li>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="userEmail">
+                    </li>
+                    <li>
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" name="userPhoneNumber">
+                    </li>
+                </div>
+                <div class="col_two">
+                    <li>
+                        <label for="addressL1">Address Line 1</label>
+                        <input type="text" id="addressL1" name="userAddressL1">
+                    </li>
+                    <li>
+                        <label for="addressL2">Address Line 2</label>
+                        <input type="text" id="addressL2" name="userAddressL2">
+                    </li>
+                    <li>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="userCity">
+                    </li>
+                    <li>
+                        <label for="province">Province</label>
+                        <input type="text" id="country" name="userProvince" value="Punjab" disabled="disabled">
+                        <input type="text" id="country" name="userProvince" value="Punjab" hidden="true">
+                    </li>
+                    <li>
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="userCountry" value="Pakistan" disabled="disabled">
+                        <input type="text" id="country" name="userCountry" value="Pakistan" hidden="true">
+                    </li>
+                </div>
+            </div>
+            <div class="actionButton">
+                <li>
+                    <button class="button" type="submit">Place your Order.</button>
+                </li>
+            </div>
+        </ul>
+    </form>
+</div>
+  
+  
+{% endblock %}

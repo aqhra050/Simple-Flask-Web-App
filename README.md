@@ -63,7 +63,10 @@ This allows the management of existing listings.
 
 ## Author
 
-This project was worked on independently.
+This project was worked on independently. 
+ 
 Name: Abdullah Javaid Chaudhry
+
 Net-ID: AJC957
+
 GITHUB username: AQHRA050

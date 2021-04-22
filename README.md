@@ -1,5 +1,7 @@
 # EidCattle - Qurbani Bulls E-Commerce Platform
 
+## Note that the nature of Links is such that the text in Links must be clicked, and clicking the general box alone does not suffice.
+
 ## Motivation
 
 It is an annual religous obligation that Muslims are to offer sacrifice, in emulation of the Prophet Ibrahim. This sacrifice, specifically, comes in the form of purchasing a livestock animal (Bulls, Cows, Goats), slaughtering them, and then offering their meat to those economically disadvantaged.
@@ -58,3 +60,10 @@ This allows the entry of a new bull listing.
 ![Manage Existings Bull Listing](./images/listingsManage.PNG)
 
 This allows the management of existing listings.
+
+## Author
+
+This project was worked on independently.
+Name: Abdullah Javaid Chaudhry
+Net-ID: AJC957
+GITHUB username: AQHRA050

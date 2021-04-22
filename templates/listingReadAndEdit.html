@@ -3,6 +3,7 @@
 {% block container %}
 <div class="gallery center">
     {% for doc in docs %}
+    <br>
     <div class="galleryItemContainer">
         <div class="inquiry">
             <h3 class="center">Bull ID: {{doc._id}}</h3>
@@ -66,6 +67,7 @@
             </div>
         </div>
     </div>
+    <br>
     {% endfor %}
 </div>
 

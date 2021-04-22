@@ -18,16 +18,16 @@
                     </div>
                     <nav class="navButtonCtnr">
                         <ul class="navButtons">
-                            <li class="navButton">
+                            <li class="navButton" id="homeTag">
                                 <a href="{{ url_for('home') }}">Home</a>
                             </li>
-                            <li class="navButton">
+                            <li class="navButton" id="bullsTag">
                                 <a href="{{ url_for('readBulls') }}">Bulls</a>
                             </li>
-                            <li class="navButton">
+                            <li class="navButton" id="inqTag">
                                 <a href="{{ url_for('inquiryRead') }}">Inquiries</a>
                             </li>
-                            <li class="navButton">
+                            <li class="navButton" id="mngTag">
                                 <a href="{{ url_for('managementPrompt') }}">Management</a>
                             </li>
                         </ul>
@@ -40,8 +40,10 @@
             <footer>
                 <div class="footerCtnr">
                     <p>The content and functionality herein is only for the purposes of an assignment, hence the unverified access to the "Inquiries" and "Management" Page.</p>
+                    <p>Orders are only accepted for Punjab, Pakistan and it is hence that this field is fixed when placing an Inquiry.</p>
                 </div>
             </footer>
         </div>
+        <script src="static/js/navigate.js"></script>
     </body>
 </html>

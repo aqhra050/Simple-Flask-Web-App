@@ -2,6 +2,11 @@
     padding: 0 0 0 0;
     margin: 0;
 }
+
+body {
+    background-color: rgb(37, 37, 37);
+}
+
 .container {
     border: 1px black solid;
     width: 80%;
@@ -14,7 +19,7 @@
 }
 
 .navBar {
-    border: 1px yellow solid;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     height: 10vh;
@@ -22,7 +27,6 @@
 
 .navLogoCtnr {
     width: 25%;
-    border: 1px black solid;
     display: flex;
 }
 
@@ -35,37 +39,41 @@
 
 .navLogoTxt {
     font-size: 3em;
-    border: 1px red solid;
+    color: white;
     margin: auto;
 }
 
 .navButtonCtnr {
-    border: 2px black solid;
     width: 50%;
 }
 
 .navButtons {
     width: 100%;
     height: 100%;
-    border: 1px blue solid;
     display: flex;
     justify-content: right;
 }
 
 .navButton {
-    border: 1px black solid;
     font-family: 'Roboto', sans-serif;
+    color: white;
     font-size: 1.5em;
     padding: 5% 0;
     width: 25%;
-    border: 1px black solid;
     text-align: center;
     list-style-type: none;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    background-color: rgb(70, 70, 70);
 }
 
 .navButton a {
-    border: 1px red solid;
+    color: white;
     text-decoration: none;
+    width: inherit;
+    height: inherit;
 }
 
 .focalImage {
@@ -95,6 +103,14 @@
 .focal-text>h2 {
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 100;
+    text-shadow: 2px 2px 5px #111;
+
+    cursor:default;
+    user-select: none;
+}
+
+.enlarge {
+    font-size: 1.5em;
 }
 
 .company_name {
@@ -106,6 +122,7 @@
     font-size: 2em;
     padding-bottom: 0px;
     letter-spacing: 0.1em;
+
 }
 
 .focal-text>h2 {
@@ -115,25 +132,31 @@
 }
 
 .footerCtnr {
+    background-color: white;
     margin: 0 auto;
 }
 
 .footerCtnr p {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
     margin-top: auto;
     margin-bottom: auto;
 }
 
+.galleryOuter {
+    background-color: black;
+}
+
 .productGallery {
-    border: 2px blue solid;
+    background-color: rgb(37, 37, 37);
     width: 80%;
-    padding: 1%;
+    padding: 1em;
     margin-left: auto;
     margin-right: auto;
 }
 
 .productGallery h2 {
+    background-color: rgba(255, 255, 255, 0.3);
     font-size: 3em;
     padding: 1em;
     text-align: center;
@@ -148,7 +171,8 @@
 }
 
 .product {
-    border: 4px green solid;
+    border: 1px white;
+    background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -158,8 +182,9 @@
 }
 
 .col_two {
+    color: white;
+    background-color: rgba(90, 0, 255, 0.2);
     width: 38%;
-    border: 2px blue solid;
 }
 
 .productImage {
@@ -185,6 +210,16 @@
 
 .productOrder {
     text-decoration: none;
+    color: black;
+}
+
+.productOrder:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.formContainer {
+    background-color: black;
 }
 
 .entryForms {
@@ -193,7 +228,8 @@
     width: 80%;
     /* Form outline */
     padding: 1em;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    background-color: rgb(37, 37, 37);
     border-radius: 1em;
   }
   
@@ -260,21 +296,19 @@ textarea:focus {
 }
 
 .gallery {
-    width: 80%;
-    background-color: rgb(70, 0, 0);
+    background-color: rgb(0, 0, 0);
     padding: 1em;
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
 }
 
 .galleryItemContainer {
-    background-color: rgba(30, 60, 0, 0.5);
+    color: wheat;
+    background-color: rgba(25, 60, 0, 0.8);
     border-radius: 0.5em;
     padding: 1em;
 }
 
 .twoContentEvenSplit {
-    border: 20px brown;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -295,9 +329,8 @@ textarea:focus {
 }
 
 .col_two_flush {
-    width: 50%;
+    width: 45%;
     background-color: black;
-    border: 1px yellow;
     text-align: center;
     padding: 1em;
 }
@@ -311,7 +344,8 @@ textarea:focus {
 
 .managementOption {
     font: 2em 'Source Sans Pro', sans-serif;
-    border: 1px white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px wheat;
 }
 
 .minimize {

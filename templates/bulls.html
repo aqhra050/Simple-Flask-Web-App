@@ -2,112 +2,115 @@
 
 {% block container %}
 
-<div class="productGallery">
-    <h2>Qurbani Bulls Presently for Sale</h2>
-    {% for doc in docs %}
-    <div class="product twoContentEvenSplit">
-    {% if loop.index is divisibleby 2 %}
-        <div class="col_two">
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Bull</p>
+<div class="galleryOuter">
+    <div class="productGallery">
+        <h2>Qurbani Bulls Presently for Sale</h2>
+        {% for doc in docs %}
+        <br>
+        <div class="product twoContentEvenSplit">
+        {% if loop.index is divisibleby 2 %}
+            <div class="col_two">
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Bull</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc._id}}</p>
+                    </div>
                 </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc._id}}</p>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Breed</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.breed}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Age</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.age}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Weight</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.weight}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Price</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.price}}</p>
+                    </div>
+                </div>
+                <div class="actionButton">
+                    <a class="productOrder" href="{{ url_for('inquiryCollect' , bullID=doc._id)}}"><p>Place an Inquiry now.</p></a>
                 </div>
             </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Breed</p>
+            <div class="col_two">
+                <img class="productImage" src={{doc.imageURL}}>
+            </div>
+        {% else %}
+            <div class="col_two">
+                <img class="productImage" src={{doc.imageURL}}>
+            </div>
+            <div class="col_two">
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Bull</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc._id}}</p>
+                    </div>
                 </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.breed}}</p>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Breed</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.breed}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Age</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.age}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Weight</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.weight}}</p>
+                    </div>
+                </div>
+                <div class="twoContentEvenSplit">
+                    <div class="fieldHeadings col_two_slim center">
+                        <p>Price</p>
+                    </div>
+                    <div class="fieldContents col_two_slim center">
+                        <p>{{doc.price}}</p>
+                    </div>
+                </div>
+                <div class="actionButton">
+                    <a class="productOrder" href="{{ url_for('inquiryCollect' , bullID=doc._id)}}"><p>Place an Inquiry now.</p></a>
                 </div>
             </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Age</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.age}}</p>
-                </div>
-            </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Weight</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.weight}}</p>
-                </div>
-            </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Price</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.price}}</p>
-                </div>
-            </div>
-            <div class="actionButton">
-                <a class="productOrder" href="{{ url_for('inquiryCollect' , bullID=doc._id)}}"><p>Place an Inquiry now.</p></a>
-            </div>
+        {% endif %}
         </div>
-        <div class="col_two">
-            <img class="productImage" src={{doc.imageURL}}>
-        </div>
-    {% else %}
-        <div class="col_two">
-            <img class="productImage" src={{doc.imageURL}}>
-        </div>
-        <div class="col_two">
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Bull</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc._id}}</p>
-                </div>
-            </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Breed</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.breed}}</p>
-                </div>
-            </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Age</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.age}}</p>
-                </div>
-            </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Weight</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.weight}}</p>
-                </div>
-            </div>
-            <div class="twoContentEvenSplit">
-                <div class="fieldHeadings col_two_slim center">
-                    <p>Price</p>
-                </div>
-                <div class="fieldContents col_two_slim center">
-                    <p>{{doc.price}}</p>
-                </div>
-            </div>
-            <div class="actionButton">
-                <a class="productOrder" href="{{ url_for('inquiryCollect' , bullID=doc._id)}}"><p>Place an Inquiry now.</p></a>
-            </div>
-        </div>
-    {% endif %}
+        <br>
+        {% endfor %}
     </div>
-
-    {% endfor %}
 </div>
 
 {% endblock %}
